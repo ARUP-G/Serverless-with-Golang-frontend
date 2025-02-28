@@ -1,6 +1,6 @@
 # Serverless Function for Frontend
 
-This repository contains a serverless function designed to work with a frontend application. The function is built using AWS Lambda and API Gateway. 
+This repository contains a frontend application that works with serverless function. The function is built using AWS Lambda and API Gateway. 
 
 ## Table of Contents
 
