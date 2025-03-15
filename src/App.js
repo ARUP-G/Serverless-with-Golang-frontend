@@ -63,11 +63,11 @@ const App = () => {
       }
       setLoadingAnimation(null); // Hide animation after response is received
     }, 2000);
-    } catch (error) {
-      setResponse("Error: Network issue or server is unreachable.");
-      setLoadingAnimation(null);
-    }
-  };
+   catch (error) {
+    setResponse("Error: Network issue or server is unreachable.");
+    setLoadingAnimation(null);
+  }
+};
 
   return (
     <div className="container">
