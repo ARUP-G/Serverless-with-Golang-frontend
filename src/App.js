@@ -13,7 +13,7 @@ const App = () => {
   const [response, setResponse] = useState(null);
   const [loadingAnimation, setLoadingAnimation] = useState(null); // Stores the current animation
 
-  const apiUrl = process.env.API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleButtonClick = async (action) => {
     let animationData;
