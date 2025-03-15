@@ -54,6 +54,7 @@ const App = () => {
     setLoadingAnimation(animationData);
     setResponse(null); // Hide previous response while loading
 
+  try {
     setTimeout(async () => {
       try {
         const data = await res.text();
@@ -63,7 +64,7 @@ const App = () => {
       }
       setLoadingAnimation(null); // Hide animation after response is received
     }, 2000);
-   catch (error) {
+  } catch (error) {
     setResponse("Error: Network issue or server is unreachable.");
     setLoadingAnimation(null);
   }
