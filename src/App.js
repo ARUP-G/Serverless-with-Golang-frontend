@@ -56,13 +56,17 @@ const App = () => {
 
     setTimeout(async () => {
       try {
-        const data = await res.json();
+        const data = await res.text();
         setResponse(data);
       } catch (error) {
-        setResponse({ error: `Failed to ${action} user` });
+        setResponse("Error: Unable to process request.");
       }
       setLoadingAnimation(null); // Hide animation after response is received
     }, 2000);
+    } catch (error) {
+      setResponse("Error: Network issue or server is unreachable.");
+      setLoadingAnimation(null);
+    }
   };
 
   return (
@@ -106,7 +110,7 @@ const App = () => {
           {loadingAnimation ? (
             <Lottie animationData={loadingAnimation} className="lottie-animation" />
           ) : (
-            response && <pre className="response-box">{JSON.stringify(response, null, 2)}</pre>
+            response && <pre className="response-box">{response}</pre>
           )}
         </div>
       </div>
