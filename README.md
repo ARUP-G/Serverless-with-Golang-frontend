@@ -1,53 +1,81 @@
-# Serverless Function for Frontend
+# Serverless with Golang
 
-This repository contains a frontend application that works with serverless function. The function is built using AWS Lambda and API Gateway. 
+## 📌 Overview
+This project implements a **serverless web application** using **Golang** for the backend and a **modern frontend**. The backend is deployed on **AWS Lambda** with **API Gateway**, while the frontend is hosted on **Vercel**. The application follows a architecture to ensure scalability, cost-efficiency, and high availability.
 
-## Table of Contents
+![Serverless Architecture](image/app.png)  
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+## 🚀 Features
+### 🔹 Backend (Golang API)
+- **Serverless architecture**: Hosted on AWS Lambda.
+- **DynamoDB** for database storage.
+- **API Gateway** for secure RESTful API access.
+- **Automatic Scaling** based on demand.
 
-## Installation
 
-To install the necessary dependencies, run the following command:
+### 🔹 Frontend (React + Vercel)
+- **Modern UI/UX** with responsive design.
+- **API Integration** with AWS Lambda.
+- **Deployed on Vercel** for high-speed delivery.
 
+## 🔧 Tech Stack
+- **Backend**: Golang, AWS Lambda, API Gateway, DynamoDB
+- **Frontend**: React.js, Tailwind CSS, Vercel
+- **Infrastructure**: Terraform 
+
+## 🎯 Architecture Diagram
+![Architecture Diagram](image/architecture-diagram.png)
+
+## 📂 Project Structure
 ```bash
-npm install
+📦 Serverless-with-Golang
+ ┣ 📂 backend
+ ┃ ┣ 📂 handlers
+ ┃ ┣ 📂 models
+ ┃ ┣ 📂 services
+ ┃ ┣ 📜 main.go
+ ┣ 📂 frontend
+ ┃ ┣ 📂 src
+ ┃ ┣ 📜 index.js
+ ┃ ┣ 📜 App.js
+ ┣ 📜 README.md
 ```
 
-## Usage
+## 🔗 Repositories
+- **Backend API**: [Serverless-with-Golang](https://github.com/ARUP-G/Serverless-with-Golang)
+- **Frontend**: [Serverless-with-Golang-frontend](https://github.com/ARUP-G/Serverless-with-Golang-frontend)
 
-To invoke the function locally, use the following command:
+## 🚀 Deployment Guide
+### Backend (AWS Lambda)
+1. Clone the backend repository
+   ```bash
+   git clone https://github.com/ARUP-G/Serverless-with-Golang.git
+   ```
+2. Deploy using intructions given in the 
+    [Backend-README.md](https://github.com/ARUP-G/Serverless-with-Golang/blob/main/README.md)
+3. Verify API Gateway endpoints
 
-```bash
-npm run local
-```
+### Frontend (Vercel)
+1. Clone the frontend repository
+   ```bash
+   git clone https://github.com/ARUP-G/Serverless-with-Golang-frontend.git
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Deploy on Vercel
+   ```bash
+   vercel deploy
+   ```
 
-## Configuration
+## 📌 Usage
+- **Access the deployed frontend**: `https://your-vercel-app.vercel.app`
+- **API Gateway URL**: `https://your-api-gateway.amazonaws.com/prod/`
+- **Authentication**: Use JWT tokens for secure access.
 
-Ensure you have the following environment variables set up:
+## 🛠️ Contributing
+Contributions are welcome! Please submit a PR or open an issue.
 
-- `API_URL`: Your AWS api gateway link for the APP [(`Serverless-with-Golang`)](https://github.com/ARUP-G/Serverless-with-Golang).
-
-
-## Deployment
-
-To deploy the function to AWS, use the following command:
-
-```bash
-npm run deploy
-```
-
-This will package and deploy your function using the Serverless Framework.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any changes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## 📜 License
+This project is licensed under the **MIT License**.
